@@ -6,7 +6,9 @@ const getSum = () => {
   const prices = document.querySelectorAll(".price");
     let ans = 0;
 
-
+   if(!prices){
+	   return;
+   }
   
     prices.forEach(price => {
       ans += parseFloat(price.textContent) || 0; // Convert text to number
@@ -15,7 +17,7 @@ const getSum = () => {
 
 
    
-      let mytable=document.getElementById("my-table")
+      let mytable=document.querySelector("table")
 
       let row=document.createElement('tr');
 
